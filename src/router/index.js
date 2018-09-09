@@ -3,10 +3,11 @@ import Router from 'vue-router'
 import Navigator from '../components/Navigator'
 import Login from '../components/Login'
 import Logged from '../components/Logged'
-import Corridor from '../components/Corridor'
-import ONKZoom from '../components/onk/zoom'
+import Hall from '../components/Hall'
+import ONKRoom from '../components/onk/Room'
 import ONKConfig from '../components/onk/config'
-import SJBZoom from '../components/sjb/zoom'
+import SJBRoom from '../components/sjb/Room'
+import Index from '../components/Index'
 
 Vue.use(Router)
 
@@ -14,12 +15,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
+      name: 'Navigator',
       component: Navigator
     }, {
-      path: '/navigator',
-      name: 'Navigator',
-      component: Login
+      path: '/index',
+      name: 'Index',
+      component: Index
     }, {
       path: '/login',
       name: 'Login',
@@ -29,21 +30,21 @@ export default new Router({
       name: 'Logged',
       component: Logged
     }, {
-      path: '/corridor',
-      name: 'Corridor',
-      component: Corridor
+      path: '/hall',
+      name: 'Hall',
+      component: Hall
     }, {
-      path: '/onk/zoom',
-      name: 'ONKZoom',
-      component: ONKZoom
+      path: '/onk/room',
+      name: 'ONKRoom',
+      component: ONKRoom
     }, {
       path: '/onk/config',
       name: 'ONK_Config',
       component: ONKConfig
     }, {
-      path: '/sjb/zoom',
-      name: 'SJB_Zoom',
-      component: SJBZoom
+      path: '/sjb/room',
+      name: 'SJB_Room',
+      component: SJBRoom
     }
   ]
 })
